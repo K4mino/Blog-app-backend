@@ -11,7 +11,7 @@ import handleValidationErrors from "./utils/handleValidationErrors.js";
 
 mongoose
   .connect(
-    "mongodb+srv://yerzhan:hokage2001@clustertest.ztlejef.mongodb.net/blogUsers?retryWrites=true&w=majority"
+    process.env.REACT_APP_DB
   )
   .then(() => {
     console.log("db connect");
